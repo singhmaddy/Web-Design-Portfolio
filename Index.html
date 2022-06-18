@@ -1,0 +1,217 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Homepage</title>
+	
+
+	
+	
+	    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+	
+	<!-- AOS.CSS -->
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	
+	<!-- Styles -->
+	
+	<link rel="stylesheet" type="text/css" href="index.css">
+	
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	
+</head>
+
+
+
+<body>
+	
+<button onclick="myFunction('Demo1')" class="w3-button w3-block w3-black w3-left-align">Accordion</button>
+<div id="Demo1" class="w3-hide w3-animate-zoom">
+  <a href="#" class="w3-button w3-block w3-left-align">HOME</a>
+  <a href="#" class="w3-button w3-block w3-left-align">ABOUT</a>
+  <a href="#" class="w3-button w3-block w3-left-align">CONTACT</a>
+  </div>
+</div>
+	
+	
+    <div class="owl-carousel owl-theme">
+        <div class="slide slide-1">
+            <div class="slide-content">
+                <h1>Welcome To Tech Memorise</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. In voluptas eaque nobis ducimus voluptate molestiae corporis mollitia atque totam eligendi voluptatem vitae, quibusdam, vero delectus repudiandae tempore sint officiis odio.</p>
+                <button>Subscribe</button>
+            </div>
+        </div>
+        <div class="slide slide-2">
+            <div class="slide-content">
+                <h1>Your True Tech Navigator</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. In voluptas eaque nobis ducimus voluptate molestiae corporis mollitia atque totam eligendi voluptatem vitae, quibusdam, vero delectus repudiandae tempore sint officiis odio.</p>
+                <button>Comment</button>
+            </div>
+        </div>
+        <div class="slide slide-3">
+            <div class="slide-content">
+                <h1>Your True Source of Learning Web Dev</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. In voluptas eaque nobis ducimus voluptate molestiae corporis mollitia atque totam eligendi voluptatem vitae, quibusdam, vero delectus repudiandae tempore sint officiis odio.</p>
+                <button>Like & Share</button>
+            </div>
+        </div>
+    </div>
+	
+	
+	<section class="container">
+		<div class="example">
+			<div  class="item" data-aos="flip-left">
+				HEY!
+			</div>
+		</div>
+
+		<div class="example">
+			<div class="item" data-aos="fade-left">
+				HOW ARE YOU DOING?
+			</div>
+		</div>
+
+		<div class="example">
+			<div class="item" data-aos="zoom-in">
+				WELCOME TO MY SITE
+			</div>
+		</div>
+
+		<div class="example">
+			<div  class="item" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+				ENJOY!!!!
+			</div>
+		</div>
+	</section>
+	
+	
+	
+	<div class="magnifier-demo">
+		<div class="magnifier-demo__image-wrapper">
+			<img id="magnifier-img" src="IMAGE.jpg"> 
+			<span class="magnifier-demo__zoomer"></span>
+		</div>
+		<div class="magnifier-demo__zoom-preview"></div>
+	</div>
+
+	
+	<script>
+function myFunction(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+	
+	<script src="displace.js"></script>
+
+<script>const img = document.querySelector('#magnifier-img');
+const preview = document.querySelector('.magnifier-demo__zoom-preview');
+const zoomer = document.querySelector('.magnifier-demo__zoomer');
+const imgDim = {};
+
+if (img.complete){
+	setupMagnifier();
+} else {
+	img.addEventListener('load', setupMagnifier);
+}
+function setupMagnifier(){
+	// set preview bg
+	preview.style.background = `url('${img.src}') no-repeat center center`;
+	
+	// set preview height
+	preview.style.height = img.offsetHeight + 'px';
+
+	const previewR = preview.offsetWidth / preview.offsetHeight;
+
+	// set zoomer dimensions
+	const zoomerW = 50;
+	zoomer.style.width = zoomerW + 'px';
+	zoomer.style.height = zoomerW / previewR + 'px';
+
+	// set bg size for preview div
+	const sizeRatio = img.offsetWidth / preview.offsetWidth;
+	preview.style.backgroundSize = `${img.naturalWidth / sizeRatio}px ${img.naturalHeight / sizeRatio}px`;
+
+	// cache dimensions
+	imgDim.w = img.offsetWidth;
+	imgDim.h = img.offsetHeight;
+
+	// init displace
+	displacejs(zoomer, {
+		constrain: true,
+		onMouseMove: updatePreview
+	});
+
+	// update preview
+	updatePreview(zoomer);
+}
+
+function updatePreview(el){
+	const x = el.offsetLeft / (imgDim.w - el.offsetWidth) * 100;
+	const y = el.offsetTop / (imgDim.h - el.offsetHeight) * 100;
+	
+	preview.style.backgroundPosition = `${x}% ${y}%`;
+}
+	</script>
+	
+	
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+	<script>
+	  AOS.init();
+
+	  AOS.init({
+	    // Global settings:
+	    disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+	    startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+	    initClassName: 'aos-init', // class applied after initialization
+	    animatedClassName: 'aos-animate', // class applied on animation
+	    useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+	    disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+	    debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+	    throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+	    
+
+	    // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+	    offset: 120, // offset (in px) from the original trigger point
+	    delay: 0, // values from 0 to 3000, with step 50ms
+	    duration: 400, // values from 0 to 3000, with step 50ms
+	    easing: 'ease', // default easing for AOS animations
+	    once: true, // whether animation should happen only once - while scrolling down
+	    mirror: false, // whether elements should animate out while scrolling past them
+	    anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+
+	  });
+	</script>
+	
+	
+	
+
+    <!-- Jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Owl Carousel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <!-- Custom Javascript -->
+    <script>
+        $(document).ready(function () {
+            $(".owl-carousel").owlCarousel({
+                items:1,
+                loop:true,
+                nav:true,
+                dots:true,
+                autoplay:true,
+                autoplaySpeed:1000,
+                smartSpeed:1500,
+                autoplayHoverPause:true
+            });
+        });
+    </script>
+</body>
+</html>
