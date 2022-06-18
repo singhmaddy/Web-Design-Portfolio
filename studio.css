@@ -1,0 +1,164 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+			margin: 0px;
+			background-color: black;
+		}
+		
+		.head{
+			text-decoration: underline;
+			font-size: 35px;
+			color: white;
+			float: left;
+			padding-top: 100px;
+			padding-left: 200px;
+		}
+		
+		h6{
+			color: white;
+			padding-left: 950px;
+			padding-top: 110px;
+		}
+		
+		.button1{
+			background-color:white;
+			color: black;
+			text-align: center;
+			margin-left:955px;
+			padding: 4px;
+			font-weight: bold;
+			border: 0px;
+			font-size: 8px;
+		}
+		
+		h5{
+			color:#220050;
+			font-size: 10px;
+			padding-top: 0px;
+			padding-left: 200px;
+		}
+		
+		.photo_1{
+			padding-left: 50px;
+		}
+	
+		.photo_2{
+			padding-left: 0px;
+		}
+		
+		center{color: aliceblue; 
+		font-size: 20px;
+		padding-top: 10%;
+			text-align: left;
+	}
+.container {
+  position: relative;
+  width: 30%;
+}
+
+	.container1 {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            flex-grow: 1;
+			margin-top:0px;
+        }
+	
+	.tiles {
+            padding: 44px;
+            border: 0.5px solid #FFFFFF;
+        }
+
+		
+		.tiles1 {
+            padding: 68px;
+            border: 0.5px solid #FFFFFF;
+        }
+		
+		.tiles2 {
+            padding: 42px;
+            border: 0.5px solid #FFFFFF;
+        }
+
+			
+		left{
+			color: #FFFFFF;
+			font-size: 40px;
+			padding-left: 0px;
+			padding-top: 50px;
+		}
+		
+		.left{
+				color: #FFFFFF;
+			font-size: 40px;
+			padding-left: 150px;
+			padding-top: 50px;
+			
+		}
+		
+		.left_1{
+			color: aliceblue; 
+		font-size: 20px;
+		padding-top: 10%;
+			text-align: right;
+	}
+		
+		.center{
+			color: #FFFFFF;
+			font-size: 40px;
+			padding-left: 80px;
+		}
+		
+		.center_1{
+			color: #FFFFFF;
+			
+			padding-top: 100px;
+		}
+		
+		
+		
+		.frame_1{
+			padding-left: 15px;
+			padding-bottom: 15px;
+			filter: grayscale(100%);
+		}
+		
+		.frame_2{
+			padding-left: 15px;
+			padding-bottom: 15px;
+		}
+		
+		.frame_3{
+			padding-left: 15px;
+			padding-bottom: 15px;
+		}
+		
+		.frame_4{
+			padding-left: 15px;
+			padding-bottom: 15px;
+		}
+		
+		
+		.frame_5{
+			padding-left: 15px;
+			padding-bottom: 15px;
+		}
+		
+		.frame_6{
+			padding-left: 15px;
+			padding-bottom: 15px;
+		}
+		
+		.frame_7{
+			padding-left: 15px;
+			filter: grayscale(100%);
+			padding-bottom: 15px;
+		}
+		
+		
+		.frame_8{
+			padding-left: 15px;
+			padding-bottom: 15px;
+		
+		}
