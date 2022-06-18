@@ -1,0 +1,137 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+			margin: 0px;
+			background-color:#FFEFD5;
+		}
+		.header{
+			background-color: black;
+			width: 100%;
+			height: 70px;
+			
+			
+		}	
+		
+		.header1{
+			width: 30%;
+			background-color: black;
+			float: left;
+			height: 70px;
+			font-size: 27px;
+
+		
+		}
+	
+	span{
+		padding-top: 21px;
+		padding-left: 25px;
+					display: block;
+	}
+		
+		.list{
+			float: right;
+			text-decoration: none;
+			text-align: center;
+			color: coral;
+			list-style-type: none;
+			width: 145px;
+			padding-top: 25px;
+			
+		}
+		
+		a:link{
+			color: coral;
+		}
+		
+		a:hover{
+			color: #ECECEC;
+		}
+		
+	
+	.mainsection{
+		padding: 100px;
+		text-align: center;
+		
+	}
+	
+	
+	.foot {
+  				background-color:black;
+  				padding: 1px;
+  				color:coral;
+				width:auto;
+				margin-top: 150px;
+				height: 150px;
+				margin-left: 0px;
+				margin-right: -100px;
+				text-align: center;
+			
+		}
+	
+	
+	
+				 section {
+					position: relative;
+					top: 100px;
+					margin: auto;
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+					overflow: hidden;
+			
+					 
+				}
+
+				@keyframes phone {
+					0% {
+						transform: rotate(0deg);
+					}
+					50% {
+						transform: rotate(10deg);
+					}
+					100% {
+						transform: rotate(0deg);
+					}
+				}
+
+				.phone {
+					font-size: 100px;
+					animation-name: phone;
+					animation-duration: .1s;
+					animation-iteration-count: infinite;
+					animation-play-state: paused;
+				
+				}
+	
+	
+
+				section:hover div {
+					animation-play-state: running;
+				}
+	
+	
+	
+	
+	 .anim2 {
+        position: relative;
+        width: 100px;
+        height: 200px;
+        margin: auto;
+        border: solid 10px black;
+        animation-name: stretch;
+        animation-duration: 2s;
+        animation-direction: alternate;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+    }
+	
+	 
+     @keyframes stretch {
+        from {
+            width: 100px;
+        }
+        to {
+            width: calc(100% - 20px);
+        }
+    }
